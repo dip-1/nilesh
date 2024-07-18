@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Practical 1</title>
+    <style>
+        button {
+            color: white;
+            background-color: red;
+            width: 100px;
+            height: 40px;
+            border-width: 5PX;
+            border-color: black;
+        }
+
+        button:hover {
+            background-color: deepskyblue;
+            cursor: grabbing;
+        }
+    </style>
+</head>
+
+
+<body>
+
+    <div class="contain">
+        <div class="main">
+            <img src="images/off bulb.jpg" id="bulbImage" alt="bulb">
+        </div>
+        <div class="buttons">
+            <button id="btnToggle">On/Off</button>
+        </div>
+    </div>
+
+    <script>
+        const bulbImage = document.getElementById("bulbImage");
+        const btnToggle = document.getElementById("btnToggle");
+
+        let isBulbOn = false;
+
+        btnToggle.addEventListener("click", function () {
+            if (isBulbOn) {
+                console.log("Turning bulb off");
+                bulbImage.src = "images/off bulb.jpg";
+            } else {
+                console.log("Turning bulb on");
+                bulbImage.src = "images/on bulb.jpg";
+            }
+            isBulbOn = !isBulbOn; 
+        });
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random massage</title>
+    <style>
+        .main {
+            font-size: 50px;
+            background-image: linear-gradient(red, yellow, pink, gray, green, orange, indigo, teal, magenta, olive, navy);
+            color: aliceblue;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main" id=" massage">result Here</div>
+    <script>
+        const massages = ["Trust is a danderious game","Wonder is an underappreciated emotion. Taking time to marvel at the world around us can bring joy and perspective.","Small acts of kindness often have ripple effects we don't see.","Learning to sit with discomfort, rather than always trying to escape it, can lead to personal growth.","The line between confidence and arrogance is thin. True confidence involves recognizing our own limitations","Time spent in nature tends to recalibrate our sense of what's important"]
+
+        const massage = document.getElementById(" massage");
+        let random = Math.floor(Math.random() * massages.length);
+        massage.innerHTML = massages[random];
+    </script>
+
+
+</body>
+
+</html>

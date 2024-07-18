@@ -1,0 +1,37 @@
+
+<!DOCKTYPE html>
+<html lang="en">
+<head>
+    <title>timer</title>
+</head>
+
+<body>
+    <div id="showCounter">1</div>
+    <div class="buttons">
+        <button id="btnStart">Start</button>
+        <button id="btnStop">Stop</button>
+    </div>
+
+    <script>
+        const showCounter=document.getElementById("showCounter");
+        const btnStart=document.getElementById("btnStart");
+        const btnStop=document.getElementById("btnStop");
+
+        let timer;
+        btnStart.addEventListener("click",function(){
+            let counter=1;
+            timer=setInterval(function(){
+
+                showCounter.innerHTML=counter;
+                counter++;
+                console.log(btn-start);
+            },0);
+        });
+
+        btnStop.addEventListener("click",function(){
+            clearTimeout(timer);
+            console.log("btn-stop");
+        });
+    </script>
+</body>
+</html>

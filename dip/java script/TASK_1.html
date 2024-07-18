@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Practical 1</title>
+    <style>
+        button {
+            color: white;
+            background-color: red;
+            width: 100px;
+            height: 40px;
+            border-width: 5PX;
+            border-color: black;
+        }
+
+        button:hover {
+            background-color: deepskyblue;
+            cursor: grabbing;
+        }
+    </style>
+</head>
+
+
+<body>
+
+    <div class="contain">
+        <div class="main">
+            <img src="images/off bulb.jpg" id="bulbImage" alt="bulb">
+        </div>
+        <div class="buttons">
+            <button id="btnOn">ON</button>
+            <button id="btnOff">OFF</button>
+        </div>
+    </div>
+
+    <script>
+        const bulbImage = document.getElementById("bulbImage");
+        const btnOn = document.getElementById("btnOn");
+        const btnOff = document.getElementById("btnOff");
+
+        console.log("image------->", bulbImage.src);
+        console.log("btnOn------->", btnOn);
+        console.log("btnOff------->", btnOff);
+
+        btnOn.addEventListener("click", function () {
+            console.log("btn-On-click");
+            bulbImage.src = "images/red.jpg";
+        });
+
+        btnOff.addEventListener("click", function () {
+            console.log("btn-Off-click");
+            bulbImage.src = "images/off bulb.jpg";
+        });
+    </script>
+
+</body>
+
+</html>

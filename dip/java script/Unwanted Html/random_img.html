@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Image</title>
+    <style>
+        .main {
+            width: 500px;
+            height: 500px;
+            padding-left: 50;
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 50px;
+            color: white; 
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main" id="massage"></div>
+    <script>
+        const images = [
+            "url('/images/img1.jpg')",
+            "url('/images/img2.jpg')",
+            "url('/images/img3.jpg')",
+            "url('/images/img4.jpg')",
+        ];
+        
+        const massage = document.getElementById("massage");
+        let randomIndex = Math.floor(Math.random() * images.length);
+
+        massage.style.backgroundImage = images[randomIndex];
+    </script>
+</body>
+
+</html>
